@@ -11,7 +11,7 @@ This project analyzes retail sales data to uncover business insights related to 
 ## 🎯 Business Objective
 The goal of this project is to transform raw retail transaction data into actionable business insights that can support decision-making.
 
-Key questions explored:
+**Key questions explored:**
 - How do sales change over time?
 - Which regions and states generate the most revenue?
 - Which customer segments contribute the most sales?
@@ -19,93 +19,127 @@ Key questions explored:
 - How does shipping performance vary by ship mode?
 
 ## 💡 Key Metrics
-- **Total Sales:** **$872,363.12**
-- **Total Orders:** **1,975**
-- **Total Customers:** **736**
-- **Average Sales per Order:** **$441.70**
+- **Total Sales:** ⭐ **$872,363.12**
+- **Total Orders:** 🛒 **1,975**
+- **Total Customers:** 👥 **736**
+- **Average Sales per Order:** 💵 **$441.70**
 
 ## 🔍 Key Findings
-- Revenue reached **$872K+** across **1,975 orders** from **736 customers**.
-- Sales performance varied significantly across regions and states, showing strong geographic concentration.
-- A small set of sub-categories and products contributed a large share of total revenue.
-- Customer segments showed different spending patterns, indicating opportunities for more targeted sales strategies.
-- Shipping performance matched expectations: **Standard Class** had the longest delivery time, while **Same Day** was the fastest.
+- **High Volume:** Revenue reached **$872K+** across **1,975 orders** from **736 customers**.
+- **Geographic Concentration:** Sales performance varied significantly across regions and states, showing strong geographic ties.
+- **Pareto Principle:** A small set of sub-categories and products contributed a disproportionately large share of total revenue.
+- **Segment Behavior:** Customer segments showed different spending patterns, indicating clear opportunities for targeted sales strategies.
+- **Shipping Logistics:** Shipping performance behaved as expected: **Standard Class** had the longest delivery times, while **Same Day** was the fastest.
 
 ## 📌 Recommendations
-- Focus inventory planning and promotional efforts on the highest-performing regions and states.
-- Prioritize top-selling products and sub-categories in future campaigns.
-- Investigate lower-performing geographic areas to identify growth opportunities.
-- Use faster shipping methods strategically for high-value or priority orders.
-- Extend the analysis with profit, discount, and return metrics for deeper business insight.
+- **Target Top Performers:** Focus inventory planning and promotional efforts on the highest-performing regions and states.
+- **Prioritize Winners:** Double down on top-selling products and sub-categories in future marketing campaigns.
+- **Growth Opportunities:** Investigate lower-performing geographic areas to identify structural issues or new growth verticals.
+- **Optimize Shipping:** Use faster shipping methods strategically for high-value or priority customer segments.
+- **Next Steps:** Extend the analysis with profit, discount, and return metrics to form a more complete picture of business health.
 
 ## 🛠️ Tech Stack
-- **Python**
-- **Pandas**
-- **Matplotlib**
-- **Jupyter Notebook**
+- **Languages:** Python
+- **Libraries:** Pandas (Data Manipulation), Matplotlib (Data Visualization)
+- **Environment:** Jupyter Notebook
 
 ## 🧹 Data Cleaning & Preparation
-The dataset was prepared through the following steps:
-- Converted `Order Date` and `Ship Date` into datetime format
-- Converted `Sales` into numeric format
-- Removed duplicate rows
-- Removed rows with missing critical values such as `Order Date` and `Sales`
-- Created derived time-based columns:
-  - `Order Year`
-  - `Order Month`
-  - `Order Month Name`
-  - `Year-Month`
-- Calculated `Shipping Delay Days` using the difference between `Ship Date` and `Order Date`
+To ensure high data integrity, the raw dataset was processed through the following steps:
+- **Type Conversion:** Converted `Order Date` and `Ship Date` into datetime formats, and cast `Sales` into workable numeric types.
+- **Standardization:** Removed duplicate rows and entries containing missing critical values (`Order Date`, `Sales`).
+- **Feature Engineering:** Created derived temporal columns for time-series analysis:
+  - `Order Year`, `Order Month`, `Order Month Name`, `Year-Month`
+- **Metric Creation:** Calculated `Shipping Delay Days` using the exact difference between `Ship Date` and `Order Date`.
 
 ## 📈 Analysis Performed
-This project includes:
-- Monthly sales trend analysis
-- Sales by region
-- Sales by customer segment
-- Top 10 states by sales
-- Top 10 sub-categories by sales
-- Top 10 products by sales
-- Average shipping delay by ship mode
+This analytical report deep-dives into:
+- Monthly sales trends & seasonality
+- Sales distribution by geographic region and state
+- Revenue breakdowns by customer segment
+- Top 10 lists for Sub-categories, Products, and States
+- Average shipping delay comparisons by logistics mode
 
 ## 📊 Visualizations
 
-### Monthly Sales Trend
-Shows how revenue changes over time and highlights possible seasonality.
+### 📅 Monthly Sales Trend
+*Shows how revenue changes over time and highlights possible seasonality and growth constraints.*
+<div align="center">
+  <img src="images/monthly_sales_trend.png" alt="Monthly Sales Trend" width="80%">
+</div>
 
-![Monthly Sales Trend](images/monthly_sales_trend.png)
+### 🌍 Sales by Region
+*Compares total sales across regions to determine geographic dominance.*
+<div align="center">
+  <img src="images/sales_by_region.png" alt="Sales by Region" width="80%">
+</div>
 
-### Sales by Region
-Compares total sales across regions.
+### 👥 Sales by Customer Segment
+*Reveals which distinct customer segment actively contributes the most overall revenue.*
+<div align="center">
+  <img src="images/sales_by_segment.png" alt="Sales by Segment" width="80%">
+</div>
 
-![Sales by Region](images/sales_by_region.png)
+### 🗺️ Top 10 States by Sales
+*Highlights the strongest-performing individual states inside the regions by total volume.*
+<div align="center">
+  <img src="images/top_10_states.png" alt="Top 10 States by Sales" width="80%">
+</div>
 
-### Sales by Customer Segment
-Shows which customer segment contributes the most revenue.
+### 🏆 Top 10 Sub-Categories by Sales
+*Identifies the highest-performing product sub-categories driving massive revenue generation.*
+<div align="center">
+  <img src="images/top_10_subcategories.png" alt="Top 10 Sub-Categories by Sales" width="80%">
+</div>
 
-![Sales by Segment](images/sales_by_segment.png)
+### 📦 Top 10 Products by Sales
+*Hones in on the specific product SKUs generating the absolute most revenue.*
+<div align="center">
+  <img src="images/top_10_products.png" alt="Top 10 Products by Sales" width="80%">
+</div>
 
-### Top 10 States by Sales
-Highlights the strongest-performing states by revenue.
-
-![Top 10 States by Sales](images/top_10_states.png)
-
-### Top 10 Sub-Categories by Sales
-Identifies the highest-performing product sub-categories.
-
-![Top 10 Sub-Categories by Sales](images/top_10_subcategories.png)
-
-### Top 10 Products by Sales
-Shows the products generating the most revenue.
-
-![Top 10 Products by Sales](images/top_10_products.png)
-
-### Average Shipping Delay by Ship Mode
-Compares delivery speed across shipping methods.
-
-![Shipping Delay by Ship Mode](images/shipping_delay_by_mode.png)
+### 🚚 Average Shipping Delay by Ship Mode
+*Compares real-world delivery speeds across all available shipping logistics methods.*
+<div align="center">
+  <img src="images/shipping_delay_by_mode.png" alt="Shipping Delay by Ship Mode" width="80%">
+</div>
 
 ## 🚀 How to Run Locally
 
 1. Clone this repository:
    ```bash
    git clone https://github.com/YOUR_USERNAME/sales-performance-analysis.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd sales-performance-analysis
+   ```
+3. Install the required dependencies:
+   ```bash
+   pip install pandas matplotlib jupyter
+   ```
+4. Launch the Jupyter Notebook:
+   ```bash
+   jupyter notebook notebooks/sales_analysis.ipynb
+   ```
+
+## 📁 Project Structure
+```text
+sales-performance-analysis/
+├── data/
+│   ├── sales.csv               # Raw dataset
+│   └── sales_cleaned.csv       # Cleaned dataset ready for analysis
+├── notebooks/
+│   └── sales_analysis.ipynb    # Main analysis notebook
+├── images/                     # Exported visualization charts
+│   ├── monthly_sales_trend.png
+│   ├── sales_by_region.png
+│   ├── sales_by_segment.png
+│   ├── top_10_states.png
+│   ├── top_10_subcategories.png
+│   ├── top_10_products.png
+│   └── shipping_delay_by_mode.png
+└── README.md                   # Project documentation (You are here!)
+```
+
+---
+*Created by [Ahmad Syafi](https://github.com/ahmd-byte) - Data Analyst*
